@@ -18,9 +18,30 @@ function ShelfPage() {
     });
   }
 
+  const myForm = () => {
+    const [description, setDescription] = useState('');
+  const [imageURL, setimageURL] = useState('');
+  }
+ 
+
+
   return (
     <div className="container">
       <h2>Shelf</h2>
+      <h4>My Form</h4>
+      <form>
+        <label>
+          Description:
+          <input type="text" placeholder="Enter a description"/>
+        </label>
+        
+        <label>
+          Image URL:
+          <input type="text" placeholder="Enter the image URL"/>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+
       <p>All of the available items can be seen here.</p>
       {
         shelfList.length === 0 && (
@@ -43,6 +64,7 @@ function ShelfPage() {
       }
       <div className="clearfix"></div>
     </div>
+  
   );
 }
 
